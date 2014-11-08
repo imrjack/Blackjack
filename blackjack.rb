@@ -67,12 +67,10 @@ def winner(dealer_total, player_total, dealer,player,name)
   if (player_total > 21 || dealer_total > 21) && (ace?(player) || ace?(dealer))
     player_ace = ace_count(player)
     dealer_ace = ace_count(dealer)
-
     until player_ace == 0 || player_total <=21 
       player_total -= 10
       player_ace -=1
     end
-
     until dealer_ace == 0 || dealer_total <= 21
       dealer_total -= 10
       dealer_ace -=1
@@ -93,7 +91,6 @@ def winner(dealer_total, player_total, dealer,player,name)
         puts "Blackjack!"
         puts "#{name} Wins!"
       end
-    
   elsif player_total == dealer_total
     puts "It's a Tie!"
   elsif player_total > dealer_total
@@ -130,10 +127,9 @@ while name == ''
   #DISPLAYS INITIAL HAND
     display_dealer(dealer) 
     display_player(player,name)
-    
     choice = ''
+    
     #PLAYER's TURN
-
     until choice == 'S'
       puts "Would you like to hit or stay?(H/S)"
       choice = gets.chomp.upcase
