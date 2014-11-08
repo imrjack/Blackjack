@@ -1,16 +1,3 @@
-# Create a deck of cards
-#Create method that allows you to deal cards
-#Create card hand method for player and dealer
-#Create a method to add up cards in hand
-#Sort cards into an array containing their true values in order to add them up.
-#Create a method to determine the winner
-    #if player goes over 21 : busts- player loses!
-  #elsif if player = 21 : blackjack
-    #if player and comp = blackjack : tie
-      #else player wins
-  #elsif comp = blackjack and player not = bust comp wins!
-require 'pry'
-
 def initialize_deck
   cards = ['Ace',"2","3","4","5","6","7","8","9","10","Jack","Queen","King"]
   suits = ['Spades', 'Hearts', 'Clubs', 'Diamonds']
